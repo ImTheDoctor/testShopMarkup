@@ -1,0 +1,732 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+/* Globals */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 5px;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.title {
+    text-align: center;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.container {
+    margin: 0 auto;
+    width: 800px;
+}
+
+/* header */
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 120px;
+    align-items: center;
+}
+
+.logo_wrapper {
+    width: 250px;
+    height: auto;
+}
+
+.logo {
+    width: 100%;
+}
+
+.menu_wrapper {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu_link {
+    cursor: pointer;
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    transition: 0.4s;
+    position: relative;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.menu_link:hover {
+    color: #963E3D;
+}
+
+.menu_link::after {
+    content: "";
+    width: 0px;
+    height: 5px;
+    background: #963E3D;
+    position: absolute;
+    border-radius: 10px;
+    bottom: -5px;
+    right: 0%;
+    transition: 0.4s;
+}
+
+.menu_link:hover::after {
+    width: 100%;
+    left: 0%;
+}
+
+.bag {
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: 0.4s;
+    color: #ffffff;
+}
+
+.bag:hover {
+    color: #963E3D;
+    transform: translateY(-5px);
+}
+
+.main h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.main span {
+    font-size: 4.5rem;
+    color: #963E3D;
+}
+
+.video_wrapper {
+    width: 100%;
+    position: relative;
+    display: block;
+    z-index: -1;
+}
+
+.video_wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.5;
+}
+
+video {
+    pointer-events: none;
+}
+
+
+/* footer by Christina*/
+
+footer {
+    box-shadow: 0px -15px 12px -1px rgba(34, 60, 80, 0.4);
+    background-color: black;
+    height: auto;
+    width: 100%;
+    color: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.footer-content h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 600px;
+    margin: 15px auto;
+    line-height: 1.8em;
+    font-size: 1em;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: white;
+}
+
+.socials a i {
+    font-size: 1.8rem;
+    transition: .4s ease;
+}
+
+.socials a:hover i {
+    color: #963E3D;
+    transform: translateY(-5px);
+}
+
+
+
+/* Products by Lilit */
+.products_section {
+    background-image: url(./assets/img/download.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: 182px;
+}
+
+.list {
+    border: 1px solid;
+    background-color: rgb(233, 226, 213);
+    margin: 5% auto;
+    width: 80%;
+    height: auto;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.info>select {
+    margin-right: 13%;
+    background-color: rgb(233, 226, 213);
+}
+
+.info>h1 {
+    padding-left: 7%;
+}
+
+.image {
+    margin: 2% auto;
+    width: 65%;
+    height: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image>div>img {
+    width: 200px;
+    height: 230px;
+    padding-top: 10px;
+}
+
+.image>div>img:hover {
+    opacity: 0.4;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.image>div>h4 {
+    padding-top: 8px;
+}
+
+.rate1 {
+    float: left;
+    height: 40px;
+}
+
+.rate1:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate1:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate1:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate1>input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate1:not(:checked)>label:hover,
+.rate1:not(:checked)>label:hover~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate1>input:checked+label:hover,
+.rate1>input:checked+label:hover~label,
+.rate1>input:checked~label:hover,
+.rate1>input:checked~label:hover~label,
+.rate1>label:hover~input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.image p {
+    padding-right: 15%;
+}
+
+.rate2 {
+    float: left;
+    height: 40px;
+}
+
+.rate2:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate2:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate2:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate2>input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate2:not(:checked)>label:hover,
+.rate2:not(:checked)>label:hover~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate2>input:checked+label:hover,
+.rate2>input:checked+label:hover~label,
+.rate2>input:checked~label:hover,
+.rate2>input:checked~label:hover~label,
+.rate2>label:hover~input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate3 {
+    float: left;
+    height: 40px;
+}
+
+.rate3:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate3:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate3:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate3>input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate3:not(:checked)>label:hover,
+.rate3:not(:checked)>label:hover~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate3>input:checked+label:hover,
+.rate3>input:checked+label:hover~label,
+.rate3>input:checked~label:hover,
+.rate3>input:checked~label:hover~label,
+.rate3>label:hover~input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate4 {
+    float: left;
+    height: 40px;
+}
+
+.rate4:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate4:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate4:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate4>input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate4:not(:checked)>label:hover,
+.rate4:not(:checked)>label:hover~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate4>input:checked+label:hover,
+.rate4>input:checked+label:hover~label,
+.rate4>input:checked~label:hover,
+.rate4>input:checked~label:hover~label,
+.rate4>label:hover~input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate5 {
+    float: left;
+    height: 40px;
+}
+
+.rate5:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate5:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate5:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate5>input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate5:not(:checked)>label:hover,
+.rate5:not(:checked)>label:hover~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate5>input:checked+label:hover,
+.rate5>input:checked+label:hover~label,
+.rate5>input:checked~label:hover,
+.rate5>input:checked~label:hover~label,
+.rate5>label:hover~input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate6 {
+    float: left;
+    height: 40px;
+}
+
+.rate6:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate6:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate6:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate6>input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate6:not(:checked)>label:hover,
+.rate6:not(:checked)>label:hover~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate6>input:checked+label:hover,
+.rate6>input:checked+label:hover~label,
+.rate6>input:checked~label:hover,
+.rate6>input:checked~label:hover~label,
+.rate6>label:hover~input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate7 {
+    float: left;
+    height: 40px;
+}
+
+.rate7:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate7:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate7:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate7>input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate7:not(:checked)>label:hover,
+.rate7:not(:checked)>label:hover~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate7>input:checked+label:hover,
+.rate7>input:checked+label:hover~label,
+.rate7>input:checked~label:hover,
+.rate7>input:checked~label:hover~label,
+.rate7>label:hover~input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate8 {
+    float: left;
+    height: 40px;
+}
+
+.rate8:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate8:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate8:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate8>input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate8:not(:checked)>label:hover,
+.rate8:not(:checked)>label:hover~label {
+    color: hwb(352 4% 13%);
+}
+
+.rate8>input:checked+label:hover,
+.rate8>input:checked+label:hover~label,
+.rate8>input:checked~label:hover,
+.rate8>input:checked~label:hover~label,
+.rate8>label:hover~input:checked~label {
+    color: hwb(352 4% 13%);
+}
+
+
+/* Contact */
+.main_contact {
+    background-image: url(./assets/img/download.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: 182px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact {
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+    background-color: rgb(233, 226, 213);
+}
+
+.contact1 {
+    width: 100%;
+    padding: 40px;
+}
+
+.contact2 {
+    width: 100%;
+    padding: 40px;
+}
+
+span {
+    color: #963E3D;
+    font-style: inherit;
+}
+
+.address {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 5px;
+}
+
+.address p {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.address p i {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    color: #963E3D;
+}
+
+.address a {
+    color: #000000;
+}
+
+.kapveq {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2rem;
+
+}
+
+.axyusak {
+    height: auto;
+    width: 100%;
+}
+
+input {
+    height: 40px;
+    width: 100%;
+    background-color: rgb(34, 34, 34);
+    border-style: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 5px 30px;
+}
+
+.submit {
+    width: 100%;
+    height: 40px;
+    background-color: #963E3D;
+}
+
+
+/* About Us - Zaruhi */
+
+.main_about{
+    background-image: url(./assets/img/download.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    margin-top: 182px;
+}
+.about_us_section{
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    background-color: rgb(233, 226, 213);
+    padding: 50px 30px;
+}
+.image1, .image3{
+    display: flex;
+    gap: 30px;
+    margin: 80px 0;
+}
+.image2{
+    margin: 80px 0;
+}
+.image2 img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
